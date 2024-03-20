@@ -20,6 +20,8 @@
 // Handedness is set by USB connection
 #define MASTER_LEFT
 
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
