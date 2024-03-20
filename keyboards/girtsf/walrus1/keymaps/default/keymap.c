@@ -24,6 +24,10 @@ enum layer_names {
 #define _WCLEFT LGUI(LCTL(KC_LEFT))
 #define _WCRGHT LGUI(LCTL(KC_RIGHT))
 
+// ctrl+alt+shift+arrow keys.
+#define _XXLEFT LALT(KC_LEFT)
+#define _XXRGHT LALT(KC_RGHT)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_LAYER_BASE] = LAYOUT(
         //                                                                    ||
@@ -35,10 +39,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_LAYER_FN] = LAYOUT(
         //                                                                    ||
-        _______, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , _______,                   _______, KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_BSLS,
+        QK_BOOT, KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , _______,                   _______, KC_F6  , KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_BSLS,
         _______, _______, _______, _______, _______, _______, _______,                   _______, KC_HOME, _______, _______, KC_END , KC_PGUP, _PIPE  ,
         _______, _______, _______, _______, _______, _______, _______,                   _______, KC_LEFT, KC_DOWN, KC_UP  , KC_RGHT, KC_PGDN, _______,
-        _______, _WCLEFT, _WCRGHT, _______, _______, _______, _______, _______, _______, _______, KC_LBRC, KC_RBRC, _LCBRC , _RCBRC , _______, _______,
+        _______, _WCLEFT, _WCRGHT, _XXLEFT, _XXRGHT, _______, _______, _______, _______, _______, KC_LBRC, KC_RBRC, _LCBRC , _RCBRC , _______, _______,
         _______, _______, _______, _______, _______,          _______, _______, KC_INS , KC_DEL ,          _______, _______, _______, _______, _______
     ),
 };
